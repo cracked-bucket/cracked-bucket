@@ -1,0 +1,40 @@
+#include <iostream>
+
+using std::cout;
+using std::cin;
+using std::endl;
+using std::ios;
+
+#include <iomanip>
+
+using std::setprecision;
+using std::setiosflags;
+
+int main()
+{
+  int total, num, counter;
+  double average;
+
+  total = 0;
+  counter = 0;
+
+  cout << "Enter Number, -1 to end.\n";
+  cin >> num;
+
+  while ( num != -1 ) {
+    total = total + num;
+    counter = counter + 1;
+    cout << "Enter Number, -1 to end.\n";
+  cin >> num;
+  }
+
+  if ( counter != 0) {
+    average = static_cast< double >( total ) / counter;
+    cout << "Average is " << setprecision( 2 )
+      << setiosflags( ios::fixed | ios::showpoint )
+      << average << endl;
+  }
+  else
+    cout << "No numbers were entered" << endl;
+  return 0;
+}
