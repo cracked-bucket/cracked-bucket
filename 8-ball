@@ -8,10 +8,7 @@ using std::endl;
 using namespace std;
 
 #include <string>
-
-int main() {
-  bool repeat = true;
-  while (repeat == true) {
+void game(){
   string question;
   srand (time(NULL));
   int roll = (rand()%10)+1;
@@ -62,6 +59,15 @@ int main() {
       cout << "How did you get this?" << endl;
     break;
   }
-  }
+  string cont;
+  cout << "Play again y/n\n";
+  cin >> cont;
+    if (cont == "y")
+      game();
+    else
+      cout << "bai bai" <<endl;
+}
+int main() {
+  game();  
   return 0;
 }
