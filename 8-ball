@@ -1,0 +1,64 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+
+using std::cout;
+using std::cin;
+using std::endl;
+using namespace std;
+
+#include <string>
+
+int main() {
+  string question;
+  srand (time(NULL));
+  int roll = (rand()%10)+1;
+  cout << "Ask me a question! I will tell you if it's true.\n";
+  cin >> question;
+  switch(roll){
+    case 1:
+      cout << "That's your best question?" << endl;
+    break;
+    
+    case 2:
+      cout << "When a pig starts flying." << endl;
+    break;
+    
+    case 3:
+      cout << "Heck no." << endl;
+    break;
+    
+    case 4:
+      cout << "What kind of question is that?" << endl;
+    break;
+    
+    case 5:
+      cout << "Um... Yes?" << endl;
+    break;
+    
+    case 6:
+      cout << "Is Caillou evil?" << endl;
+    break;
+    
+    case 7:
+      cout << "I really don't care, but yes I guess..." << endl;
+    break;
+    
+    case 8:
+      cout << "ಠ_ಠ................................................................................................................................................................................................................................................................................................................................No." << endl;
+    break;
+    
+    case 9:
+      cout << "Obviously." << endl;
+    break;
+    
+    case 10:
+      cout << "What makes you think that would be true????" << endl;
+    break;
+    
+    default:
+      cout << "How did you get this?" << endl;
+    break;
+  }
+  return 0;
+}
