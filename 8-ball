@@ -13,7 +13,7 @@ void game(){
   srand (time(NULL));
   int roll = (rand()%10)+1;
   cout << "Ask me a question! I will tell you if it's true.\n";
-  cin >> question;
+  getline (cin, question);
   switch(roll){
     case 1:
       cout << "That's your best question?" << endl;
@@ -61,7 +61,7 @@ void game(){
   }
   string cont;
   cout << "Play again y/n\n";
-  cin >> cont;
+  getline (cin, cont);
     if (cont == "y")
       game();
     else
