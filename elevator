@@ -1,0 +1,28 @@
+int time=0, max, floor;
+cout << "Enter time: \n";
+cin >> max;
+cout << "Building is 24 stories high.\n\n";
+cout << "*** BEGIN ELEVATOR SIMILATION ***\n\n";
+
+if(max<5)
+  cout << "Time entered to short.";
+else if(max>5 && max<=14)
+do{
+  time++;
+  cout<<"TIME: "<<time<<"\nelevator at rest on floor 1\n\n";
+  if(time==4)
+    cout<<"TIME: 5\nPerson 1 gets in, elevator moves up.\n\n";
+  }while(time<4);
+else if(max>15 && max<=20)
+  do{
+  time++;
+  cout<<"TIME: "<<time<<"\nelevator at rest on floor 1\n\n";
+  if(time==4)
+    cout<<"TIME: 5\nPerson 1 gets in, elevator moves up.\n\n";
+  if(time==14)
+    cout<<"TIME: 15\nPerson 2 gets in, Person 1 gets out, elevator moves up.\n\n";
+  }while(time<14);
+else if(max>24)
+  cout<<"The building is too short to run the simulation.";
+else if(max==time)
+  cout<<"TIME: "<<max<<"\nElevator moves down to floor 1.\n\n*** END SIMULATION ***"<<endl;
